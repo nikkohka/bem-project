@@ -1,0 +1,82 @@
+@import '_variables';
+
+.page {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    
+    &__header {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    color: antiquewhite;
+    padding: 20px;
+    
+    &__nav {
+        display: flex;
+    }
+
+        &-item {
+            display: flex;
+            align-items: stretch;
+        
+            &-link {
+                color: #fff;
+                text-decoration: none;
+                margin-left: 15px;
+            
+                &:hover {
+                    color: #ff0000;
+                }
+            } 
+        }      
+    }
+}
+
+.content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.comment {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: #ff0000;
+}
+
+.image {
+    padding: 20px;
+
+        &__gallery {
+            text-align: center;
+        }
+            &__photo {
+                width: 30%; 
+                height: auto; 
+            }
+           
+}    
+
+.footer {
+    background-color: $primary-color;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@mixin button-style ($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 20px 30px;
+    border: none;
+    cursor: pointer;
+}
+.button-primary {
+    @include button-style(blue, white)
+}
